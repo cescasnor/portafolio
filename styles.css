@@ -1,0 +1,353 @@
+@font-face {
+  font-family: 'Pacifico';
+  src: url('resources/fonts/Pacifico/Pacifico-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('resources/fonts/Ubuntu/Ubuntu-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('resources/fonts/Rubik/Rubik-Light.ttf') format('truetype');
+}
+
+/* GENERAL */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+html { 
+  font-size: 16px;
+  scroll-behavior: smooth;
+  max-width: 1400px;
+  min-width: 900px;
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+body {
+  background-color: #EDF6F9;
+  color: #2E2E2E;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+}
+
+.section__space{
+  padding-top: 80px;
+}
+
+.section__title{
+  color: #354F52;
+  font-size: 2.5rem;
+  font-weight: 200;
+  font-family: 'Rubik', sans-serif;
+  scroll-margin-top: 130px;
+}
+
+ /* FLEX */
+.center_flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* NAV */
+.nav {
+  padding: 2%;
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+}
+
+.nav__ul{  
+  background-color: #354F52;
+  border: 3px solid #84A59D;
+  border-radius: 30px;
+  padding: 10px;
+  gap: 10px;
+}
+
+.nav__item{
+  padding: 10px;
+  transition-duration: .3s;
+}
+
+.nav__item:hover{
+  outline: 1px solid #84A59D;
+  background-color: #2F3E46;
+  border-radius: 20px;
+}
+
+.nav__icon{
+  margin-right: 5px;
+}
+
+/* ABOUT ME */
+.about {
+  scroll-margin-top: 130px;
+  margin: 10% 5%;
+}
+
+.about__description-intro {
+  color: #354F52;
+  font-size: 3rem;
+}
+
+.about__description-name{
+  font-size: 2.5rem;
+}
+
+.about__description-position{
+  color: #52796F;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.about__description {
+  max-width: 50%;
+}
+
+.about__description-description{
+  font-size: 1.5rem;
+  text-wrap: balance; 
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.about__profile {
+  margin-left: 3%;
+}
+
+.about__profile-image{
+  border: 3px solid #84A59D;
+  border-radius: 50%;
+}
+
+.about__socialmedia {
+  flex-direction: column;
+}
+
+.about__socialmedia-image{
+  height: 50px;
+  width: 50px;
+  margin: 16px;
+}
+
+.about__socialmedia-image:hover{
+  outline: 3px dashed #84A59D;
+  border-radius: 50%;
+}
+
+/* PROJECTS */
+.box__projects{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.box__projects-item{
+  background-color: #2F3E46;
+  width: 300px;
+  margin: 15px;
+  box-shadow: 2px 2px 20px #c7c6c6;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 500px;  
+}
+
+.box__projects-item-image{
+  background-color: #EDF6F9;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 45%;
+  overflow: hidden;
+}
+
+.box__projects-item-photo{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.box__projects-item-text{
+  font-family: 'Ubuntu', cursive;
+  color: #F7F7F7;
+  margin: 15px;
+  flex-grow: 1;
+  align-items: start;
+}
+
+.box__projects-item-button-box{
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.box__projects-item-button{
+  background-color: #F28482;
+  font-family: 'Ubuntu', cursive;
+  color: #F7F7F7;
+  font-weight: 200;
+  border-radius: 12px;
+  border: none;
+  padding: 10px 20px;
+  transition: .5s;
+}
+
+.box__projects-item-button:hover {
+  background-color: #E76C6B;
+}
+
+/* TIMELINE EXPERIENCIA*/
+.timeline {
+  position: relative;
+  margin: 20px auto;
+  padding: 20px 0;
+  width: 90%;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background-color: #F28482;
+}
+
+.timeline-item {
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.timeline-content {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.timeline-content h3 {
+  margin: 0;
+  color: #52796F;
+}
+
+.timeline-content p {
+  margin: 5px 0 0;
+}
+
+.timeline-content-jobposition {
+  color: #84A59D;
+  font-weight: lighter;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+}
+
+.timeline-content-jobcompany {
+  color: #E76C6B;
+  font-weight: 400;
+  font-family: 'Ubuntu', cursive;
+}
+
+.timeline-content ul {
+  list-style-type: disc;
+  margin-left: 10px;
+  margin-top: 30px;
+}
+
+.timeline-content ul li {
+  margin: 8px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* CERTIFICACIONES */
+.certification{
+  width: 80%;
+  margin: 20px auto;
+}
+
+.certification-image{
+  height: 200px;
+  width: 200px;
+  padding: 10px;
+}
+
+.contacto {
+  background-color: red;
+  width: 70%;
+  margin: 10px auto;
+}
+
+/* CONTACTO */
+.form-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 10px 10px 12px rgba(0,0,0,0.15);
+  width: 50%;
+  margin: 50px auto;
+  border: 3px solid #84A59D;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  color: #2E2E2E;
+  text-align: center;
+}
+
+.form-group {
+  margin: 30px;
+}
+
+.form-group label {
+  font-weight: bold;
+  color: #354F52;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #52796F;
+  outline: none;
+  font-size: 14px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+  border-color: #52796F;
+  box-shadow: 0 0 6px rgba(23,198,102,0.4);
+}
+
+.form-group textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+.form-button {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.btn-submit {
+  width: 100%;
+  margin: 10px auto;
+  background: #F28482;
+  color: #fff;
+  font-weight: bold;
+  padding: 18px;
+  width: 50%;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-submit:hover {
+  background: #E76C6B;
+}
